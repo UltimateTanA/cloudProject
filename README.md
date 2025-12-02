@@ -43,7 +43,7 @@ The application follows a **Microservices-based architecture** hosted on AWS.
 
 ---
 
-## ⚙️ Prerequisites
+## Prerequisites
 
 Before running the project, ensure you have:
 * Node.js (v18+)
@@ -53,3 +53,7 @@ Before running the project, ensure you have:
 * MongoDB Atlas Connection String.
 
 ---
+## Some Info
+* **backend:** This contains the code of Sigup and Login.
+* **backendG:** This contains the code of Telegram Bot managment and API
+* **backednt:** This contains the code of Google OAuth managment and Google API and interaction with ML model.
