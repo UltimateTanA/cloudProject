@@ -1,6 +1,6 @@
 # Smart Email-to-Telegram Integration
 
-![Project Architecture](https://drive.google.com/file/d/1JL2DfJgep3dXGpn-I_1RjyQpnXSnuPQ8/view?usp=sharing)
+![Project Architecture] (https://drive.google.com/file/d/1JL2DfJgep3dXGpn-I_1RjyQpnXSnuPQ8/view?usp=sharing)
 ## Overview
 **This project** is a full-stack automated notification system that bridges **Gmail** and **Telegram**. It solves the problem of missing important emails by filtering incoming messages using AI and instantly forwarding alerts to your Telegram chat.
 Instead of constantly checking your inbox, it notifies you only when it matters.
