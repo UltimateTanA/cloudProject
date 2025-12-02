@@ -1,6 +1,6 @@
 # Kutipage: Smart Email-to-Telegram Integration
 
-![Project Architecture]((https://meet.google.com/sro-gveq-iiw))
+![Project Architecture] (https://drive.google.com/file/d/1JL2DfJgep3dXGpn-I_1RjyQpnXSnuPQ8/view?usp=sharing)
 
 ## Overview
 **This project** is a full-stack automated notification system that bridges **Gmail** and **Telegram**. It solves the problem of missing important emails by filtering incoming messages using AI and instantly forwarding alerts to your Telegram chat.
