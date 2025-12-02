@@ -1,7 +1,6 @@
-# Kutipage: Smart Email-to-Telegram Integration
+# Smart Email-to-Telegram Integration
 
-![Project Architecture] (https://drive.google.com/file/d/1JL2DfJgep3dXGpn-I_1RjyQpnXSnuPQ8/view?usp=sharing)
-
+![Project Architecture](https://drive.google.com/file/d/1JL2DfJgep3dXGpn-I_1RjyQpnXSnuPQ8/view?usp=sharing)
 ## Overview
 **This project** is a full-stack automated notification system that bridges **Gmail** and **Telegram**. It solves the problem of missing important emails by filtering incoming messages using AI and instantly forwarding alerts to your Telegram chat.
 Instead of constantly checking your inbox, it notifies you only when it matters.
@@ -34,6 +33,7 @@ The application follows a **Microservices-based architecture** hosted on AWS.
 * **Docker:** Containerization for consistent deployment.
 * **Google Gmail API:** For watching inboxes and fetching messages.
 * **Telegram Bot API:** For sending real-time alerts.
+* **Pyton:** For ML model training
 
 ### Infrastructure & DevOps
 * **AWS EC2:** Hosting backend containers.
@@ -57,3 +57,4 @@ Before running the project, ensure you have:
 * **backend:** This contains the code of Sigup and Login.
 * **backendG:** This contains the code of Telegram Bot managment and API
 * **backednt:** This contains the code of Google OAuth managment and Google API and interaction with ML model.
+* **Sagemaker.py:** This contains python code for training machine learning model.
