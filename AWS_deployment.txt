@@ -1,0 +1,43 @@
+DEPLOYMENT LOG: SINGLE DOCKER CONTAINER ON EC2
+
+1. SERVER CONNECTION
+   # Connect to the remote EC2 instance using the PEM key
+   ssh -i <path_to_pem_key> ubuntu@<public_ip_address>
+
+2. SERVER SETUP
+   # Update package database
+   sudo apt update
+   
+   # Install Docker engine
+   sudo apt install docker.io -y
+   
+   # Start the Docker service
+   sudo systemctl start docker
+   
+   # Ensure Docker starts if the server reboots
+   sudo systemctl enable docker
+   
+   # Give the 'ubuntu' user permission to run Docker commands
+   sudo usermod -aG docker $USER
+
+3. DEPLOYMENT
+   # Build the Docker image from the current directory
+   # Tag: 'backend'
+   sudo docker build -t backend .
+   # Port Mapping: External 3001 -> Internal 3001
+   # Env File: Inject secrets from .env
+   sudo docker run -d -p 3001:3001 --env-file .env --name my-app backend
+
+4. VERIFICATION & LOGS
+   # Check if the container is running (List active containers)
+   sudo docker ps
+   
+   # View the application logs (for debugging)
+   sudo docker logs my-app
+
+5. MAINTENANCE & UPDATES
+   # Copy updated files from local machine to server
+   scp -i <path-to-key-name> -r <path-in-home-directory> ubuntu@<public-IP-address>:<path-where-you-want-to-copy>
+  
+6.REMOVING DOCKER
+  sudo docker rm -f my-app
