@@ -1,6 +1,6 @@
 // src/models/User.js
 const mongoose = require("mongoose");
-
+require('dotenv').config();
 const userSchema = new mongoose.Schema({
   username: {
     type: String,
@@ -38,20 +38,20 @@ const userSchema = new mongoose.Schema({
       type: String,
     },
     username: {
-      type: String, 
+      type: String, // Telegram username (optional)
     },
     firstName: {
-      type: String, 
+      type: String, // Telegram first name
     },
     connectedAt: {
-      type: Date, 
+      type: Date, // Timestamp when connected
     },
     connectionToken: {
-      type: String, 
+      type: String, // Temporary token for connecting (expires after use)
       index: true,
     },
     connectionTokenExpiry: {
-      type: Date,
+      type: Date, // When the connection token expires
     }
   }
 }, { timestamps: true });
